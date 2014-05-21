@@ -1,6 +1,52 @@
 doctype html
 html(lang="ja")
   head
+    meta(charset='UTF-8')
     title= index.title
   body
-    p= index.lorem
+    #container
+      header
+        .top
+          .logo
+            img(src="./img/logomark_s.png")
+          nav
+            ul
+              each val in index.nav
+                li
+                  a(href="#")= val
+        h1= index.h
+        p= index.lorem_s
+        img(src="./img/bill1.jpg")
+
+      #main
+        aside
+          .asideLogo
+            img(src="./img/logomark_l.png")
+          - for (var i = 1; i < 4; i++)
+            .publicity
+              img(src="./img/aside#{i}.jpg")
+              h3= index.h
+              p= index.lorem
+        article
+          each val in ['Topics', 'Tops', 'Bottoms']
+            include layout/sectionHead
+            case val
+              when 'Topics'
+                .iframeWrap
+                  iframe(width="790" height="444" src="//www.youtube.com/embed/FynvU8iBhCU?list=UU5w1w4bAj-OJO13EX9VLt5Q" frameborder="0" allowfullscreen)
+              default
+                - for (var i = 1; i < 7; i++)
+                  .item
+                    img(src="./img/#{val}#{i}.jpg")
+                    p= index.lorem_s
+
+      footer
+        .footerHead
+          h2 Access
+          p= index.lorem_s
+        .iframeWrap
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.650675473545!2d139.6998474!3d35.6609773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca838eadd8f%3A0x6cc6449c24d11d60!2zRk9SRVZFUjIxIOa4i-iwt-W6lw!5e0!3m2!1sja!2s!4v1400642375632" width="1020" height="600" frameborder="0" style="border:0")
+        .footerBottom
+          img(src="./img/logomark_s.png")
+          small= index.lorem_s
+

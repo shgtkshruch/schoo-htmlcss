@@ -1,3 +1,10 @@
 index:
   title: schoo
+  h: XXXXXXXXXX
   lorem: Adipisicing fugiat amet esse quasi amet architecto, magnam sit veritatis. Porro eius quam dolores odio obcaecati deleniti voluptatem voluptate non quis. Tenetur incidunt esse natus odit labore tempore consectetur. Non?
+  lorem_s: Ipsum nesciunt tempora aspernatur corrupti ex. Sit atque minima id cum ipsum sit dolorem.
+  nav:
+    - Topics
+    - Tops
+    - Bottom
+    - Access
