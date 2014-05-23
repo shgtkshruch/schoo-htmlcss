@@ -3,14 +3,16 @@ html(lang="ja")
   head
     meta(charset='UTF-8')
     title= index.title
+    link(rel="stylesheet" href="/css/html5reset-1.6.1.css")
+    link(rel="stylesheet" href="/css/style.css")
   body
     #container
       header
-        .top
+        .top.cf
           .logo
             img(src="/img/logomark_s.png")
           nav
-            ul
+            ul.cf
               each val in index.nav
                 li
                   a(href="#")= val
@@ -19,18 +21,19 @@ html(lang="ja")
         img(src="/img/bill1.jpg")
 
       #main
-        aside
+        aside.cf
           .asideLogo
             img(src="/img/logomark_l.png")
           - for (var i = 0; i < 3; i++)
             .publicity
               img(src="/img/aside#{i+1}.jpg")
               h3= index.h
-              p= index.lorem
+              p= index.lorem_m
         article
+          h3= index.h
           each val in index.nav
             if val != 'Access'
-              section
+              section.cf
                 .sectionHead
                   h2= val
                   p= index.lorem_s
@@ -41,17 +44,22 @@ html(lang="ja")
                   when 'Tops'
                   when 'Bottoms'
                     - for (var i = 0; i < 6; i++)
-                      .item
-                        img(src="/img/#{val}#{i+1}.jpg")
-                        p= index.lorem_s
+                      if i == 2 || i == 5
+                        .item.mr0
+                          img(src="/img/#{val}#{i+1}.jpg")
+                          p= index.lorem_ss
+                      else
+                        .item
+                          img(src="/img/#{val}#{i+1}.jpg")
+                          p= index.lorem_ss
 
       footer
-        .footerHead
+        .sectionHead
           h2 Access
           p= index.lorem_s
         .iframeWrap
           iframe(src="#{index.map}" width="1020" height="600" frameborder="0" style="border:0")
         .footerBottom
           img(src="/img/logomark_s.png")
-          small= index.lorem_s
+          small= index.lorem_m
 

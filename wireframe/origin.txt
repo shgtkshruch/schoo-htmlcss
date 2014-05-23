@@ -1,1 +1,5 @@
+html
 http://akikito.com/schoo/20140520/
+
+css
+http://akikito.com/schoo/20140522/
