@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/* ==================================================
+  Base
+ ================================================== */
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;  
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* ==================================================
+  Styleing
+ ================================================== */
+#container {
+  width: 1020px;
+  margin: 0 auto;
+  /* background: url(../img/wireframe.png); */
+}
+
+/* ==================================================
+  Header
+ ================================================== */
+.top {
+  position: absolute;
+  width: 100%;
+  padding-top: 20px;
+  .logo {
+    float: left;
+    margin-left: 35px;
+  }
+}
+
+nav {
+  float: right;
+  margin-right: 75px;
+  font-size: 18px;
+  li {
+    float: left;
+    margin-left: 20px;
+    line-height: 2;
+  }
+}
+
+header {
+  position: relative;
+  margin-bottom: 40px;
+  h1 {
+    font-size: 100px;
+    color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+  }
+  p {
+    position: absolute;
+    top: 180px;
+    left: 40px;
+  }
+}
+
+/* ==================================================
+  Main
+ ================================================== */
+#main {
+  width: 790px;
+  margin: 0 auto 75px auto;
+}
+
+/* aside
+ ================================================== */
+aside {
+  padding-bottom: 76px;
+}
+
+.asideLogo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.publicity {
+  width: 230px;
+  float: left;
+  & + .publicity {
+    margin-left: 50px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 2;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+/* article
+ ================================================== */
+article {
+  h3 {
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  section + section {
+    margin-top: 75px;
+  }
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+.item {
+  width: 230px;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  &.mr0 {
+    margin-right: 0;  
+  }
+  img {
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
+
+/* ==================================================
+  Footer
+ ================================================== */
+footer {
+  .sectionHead {
+    width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footerBottom {
+  padding: 20px 0 10px;
+  text-align: center;
+  background-color: #ccc;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  small {
+    font-size: 12px;
+  }
+}
